@@ -4,10 +4,10 @@
 
 <a id="bruteforce"/>
 ## Brute Force Solution
-```java
-```
+<br>
 
 <a id="optimized"/>
 ## Optimized Solution
-```java
-```
+<br>
+
+
