@@ -16,6 +16,8 @@ Output: 11
 ```
 <a id="bruteforce"></a>
 ## Brute Force Solution
+Time Complexity :: O(N)
+Space Complexity :: O(1)
 ### Java Solution
 ```java
 class Solution {
@@ -30,10 +32,18 @@ class Solution {
 ```
 ### JavaScript Solution
 ```javascript
-
+var findMin = function(nums) {
+    let min = Infinity;
+    for (let n of nums) {
+        min = Math.min(min, n);
+    }
+    return min;
+}
 ```
 <a id="optimized"></a>
 ## Optimized Solution
+Time Complexity :: O(log N)
+Space Complexity :: O(1)
 ### Java Solution
 ```java
 
