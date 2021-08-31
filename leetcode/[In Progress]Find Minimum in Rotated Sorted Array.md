@@ -1,7 +1,12 @@
 # Find Minimum in Rotated Sorted Array
+* [Examples](#example)
 * [Brute Force Solution](#bruteforce)
 * [Optimized Solution](#optimized)
 * [Notes](#notes)
+
+<a id="example"/>
+## Examples
+<br>
 
 <a id="bruteforce"/>
 ## Brute Force Solution
