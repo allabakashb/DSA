@@ -22,8 +22,8 @@ Output: 1
 ```
 <a id="bruteforce"></a>
 ## Brute Force Solution
-Time Complexity :: O(N)
-Space Complexity :: O(1)
+##### Time Complexity :: O(N)
+##### Space Complexity :: O(1)
 ### Java Solution
 ```java
 class Solution {
@@ -48,8 +48,8 @@ var findMin = function(nums) {
 ```
 <a id="optimized"></a>
 ## Optimized Solution
-Time Complexity :: O(log N)
-Space Complexity :: O(1)
+##### Time Complexity :: O(log N)
+##### Space Complexity :: O(1)
 ### Java Solution
 ```java
 class Solution {
