@@ -84,4 +84,4 @@ var findMin = function(nums) {
 ```
 <a id="notes"></a>
 ## Notes
-* Dont try to calculate mid by adding 1 - ```(start + end + 1) / 2```, it will end up in infinite loop for i = 0;
+* Dont try to calculate mid by adding 1 - ```(start + end + 1) / 2```, it will end up in infinite loop for ```i = 0```;
