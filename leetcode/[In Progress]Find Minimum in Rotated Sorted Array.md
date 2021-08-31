@@ -5,17 +5,17 @@
 * [Notes](#notes)
 
 <a id="example"/>
-## Examples
+<h3>Examples</h3>
 <br>
 
 <a id="bruteforce"/>
-## Brute Force Solution
+<h3>Brute Force Solution</h3>
 <br>
 
 <a id="optimized"/>
-## Optimized Solution
+<h3>Optimized Solution</h3>
 <br>
 
 <a id="notes"/>
-## Notes
+<h3>Notes</h3>
 <br>
