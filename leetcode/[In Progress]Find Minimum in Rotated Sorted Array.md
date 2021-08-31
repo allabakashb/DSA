@@ -7,12 +7,18 @@
 <a id="example"></a>
 ## Examples
 ```
-Input: [3,4,5,1,2]
+Input: [3,4,5,6,7,1,2]
 Output: 1
-Input: [4,5,6,7,0,1,2]
-Output: 0
-Input: [11,13,15,17]
-Output: 11
+Input: [5,6,7,1,2,3,4]
+Output: 1
+Input: [6,7,1,2,3,4,5]
+Output: 1
+Input: [3,4,5,6,7,8,1,2]
+Output: 1
+Input: [5,6,7,8,1,2,3,4]
+Output: 1
+Input: [7,8,1,2,3,4,5,6]
+Output: 1
 ```
 <a id="bruteforce"></a>
 ## Brute Force Solution
@@ -46,7 +52,20 @@ Time Complexity :: O(log N)
 Space Complexity :: O(1)
 ### Java Solution
 ```java
-
+class Solution {
+    public int findMin(int[] nums) {
+        int start = 0, end = nums.length-1;
+        while (start < end) {
+            int mid = (start + end) / 2;
+            if (nums[mid] > nums[end]) {
+                start = mid + 1;
+            } else {
+                end = mid;
+            }
+        }
+        return nums[start];
+    }
+}
 ```
 ### JavaScript Solution
 ```javascript
