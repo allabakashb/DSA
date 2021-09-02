@@ -81,7 +81,7 @@ class Solution {
 ```javascript
 var arrayNesting = function(nums) {
   function recurse(nums, index, dp) {
-    if (dp[index] != 0) return Math.max(0, dp[index]);
+    if (dp[index]) return Math.max(0, dp[index]);
     dp[index] = -1;
     dp[index] = recurse(nums, nums[index], dp) + 1;
     return dp[index];
