@@ -55,6 +55,8 @@ var arrayNesting = function(nums) {
 ```
 <a id="optimized"></a>
 ## Optimized Solution
+##### Time Complexity :: O(N)
+##### Space Complexity :: O(N)
 ### Java Solution
 ```java
 class Solution {
@@ -77,7 +79,19 @@ class Solution {
 ```
 ### JavaScript Solution
 ```javascript
-
+var arrayNesting = function(nums) {
+  function recurse(nums, index, dp) {
+    if (dp[index] != 0) return Math.max(0, dp[index]);
+    dp[index] = -1;
+    dp[index] = recurse(nums, nums[index], dp) + 1;
+    return dp[index];
+  }
+  let maxLen = 0, dp = [];
+  for (let i = 0; i < nums.length; i++) {
+    maxLen = Math.max(maxLen, recurse(nums,i, dp);
+  }
+  return maxLen;
+}
 ```
 <a id="notes"></a>
 ## Notes
