@@ -88,7 +88,7 @@ var arrayNesting = function(nums) {
   }
   let maxLen = 0, dp = [];
   for (let i = 0; i < nums.length; i++) {
-    maxLen = Math.max(maxLen, recurse(nums,i, dp);
+    maxLen = Math.max(maxLen, recurse(nums,i, dp));
   }
   return maxLen;
 }
