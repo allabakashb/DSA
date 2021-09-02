@@ -16,7 +16,23 @@ Output: 1
 ## Brute Force Solution
 ### Java Solution
 ```java
-
+class Solution {
+  public int arrayNesting(int[] nums) {
+    int maxLength = 0;
+    for (int i = 0; i < nums.length; i++) {
+      int index = i;
+      boolean[] visited = new boolean[nums.length];
+      int len = 0;
+      while (!visited[index]) {
+        visited[i] = true;
+        index = nums[i];
+        ++len;
+      }
+      maxLength = Math.max(len, maxLength);
+    }
+    return maxLength;
+  }
+}
 ```
 ### JavaScript Solution
 ```javascript
