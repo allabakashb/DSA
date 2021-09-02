@@ -14,6 +14,8 @@ Output: 1
 ```
 <a id="bruteforce"></a>
 ## Brute Force Solution
+##### Time Complexity :: O(N*N)
+##### Space Complexity :: O(N*N)
 ### Java Solution
 ```java
 class Solution {
@@ -24,8 +26,8 @@ class Solution {
       boolean[] visited = new boolean[nums.length];
       int len = 0;
       while (!visited[index]) {
-        visited[i] = true;
-        index = nums[i];
+        visited[index] = true;
+        index = nums[index];
         ++len;
       }
       maxLength = Math.max(len, maxLength);
@@ -36,13 +38,42 @@ class Solution {
 ```
 ### JavaScript Solution
 ```javascript
-
+var arrayNesting = function(nums) {
+  let maxLen = 0;
+  for (let i = 0; i < nums.length; i++) {
+      let index = i, len = 0;
+      let visited = [];
+      while (!visited[index]) {
+          visited[index] = true;
+          index = nums[index];
+          ++len;
+      }
+      maxLen = Math.max(maxLen, len);
+  }
+  return maxLen;
+};
 ```
 <a id="optimized"></a>
 ## Optimized Solution
 ### Java Solution
 ```java
-
+class Solution {
+  public int arrayNesting(int[] nums) {
+    int maxLen = 0;
+    int[] dp = new int[nums.length];
+    for (int i = 0; i < nums.length; i++) {
+      maxLen = Math.max(maxLen, recurse(nums, i, dp));
+    }
+    return maxLen;
+  } 
+  private int recurse(int[] nums, int index, int[] dp) {
+    if (dp[index] < 0) return 0;
+    if (dp[index] > 0) return dp[index];
+    dp[index] = -1;
+    dp[index] = recurse(nums, nums[index], dp) + 1;
+    return dp[index];
+  }
+}
 ```
 ### JavaScript Solution
 ```javascript
