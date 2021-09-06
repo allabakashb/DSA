@@ -24,6 +24,7 @@ class Solution {
       int duration = releaseTimes[i] - releaseTimes[i-1];
       if (duration > max) {
         maxChar = keysPressed.charAt(i);
+        max = duration;
       } else if (duration == max && maxChar < keysPressed.charAt(i)) {
         maxChar = keysPressed.charAt(i);
       }
