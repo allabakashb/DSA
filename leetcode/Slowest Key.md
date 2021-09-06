@@ -15,6 +15,8 @@ Output: "a"
 <a id="bruteforce"></a>
 ## Brute Force Solution
 ### Java Solution
+##### Time Complexity :: O(N)
+##### Space Complexity :: O(1)
 ```java
 class Solution {
   public char slowestKey(int[] releaseTimes, String keysPressed) {
