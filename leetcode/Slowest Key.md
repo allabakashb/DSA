@@ -7,18 +7,30 @@
 <a id="example"></a>
 ## Examples
 ```
-Input: [3,4,5,1,2]
-Output: 1
-Input: [4,5,6,7,0,1,2]
-Output: 0
-Input: [11,13,15,17]
-Output: 11
+Input: releaseTimes = [9,29,49,50], keysPressed = "cbcd"
+Output: "c"
+Input: releaseTimes = [12,23,36,46,62], keysPressed = "spuda"
+Output: "a"
 ```
 <a id="bruteforce"></a>
 ## Brute Force Solution
 ### Java Solution
 ```java
-
+class Solution {
+  public char slowestKey(int[] releaseTimes, String keysPressed) {
+    int max = releaseTimes[0];
+    char maxChar = keysPressed.charAt(0);
+    for (int i = 1; i < releaseTimes.length; i++) {
+      int duration = releaseTimes[i] - releaseTimes[i-1];
+      if (duration > max) {
+        maxChar = keysPressed.charAt(i);
+      } else if (duration == max && maxChar < keysPressed.charAt(i)) {
+        maxChar = keysPressed.charAt(i);
+      }
+    }
+    return maxChar;
+  }
+}
 ```
 ### JavaScript Solution
 ```javascript
