@@ -7,18 +7,29 @@
 <a id="example"></a>
 ## Examples
 ```
-Input: [3,4,5,1,2]
-Output: 1
-Input: [4,5,6,7,0,1,2]
-Output: 0
-Input: [11,13,15,17]
-Output: 11
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
+Input: head = [1,2,3,4,5,6]
+Output: [6,5,4,3,2,1]
 ```
 <a id="bruteforce"></a>
 ## Brute Force Solution
+##### Time Complexity :: O(N)
+##### Space Complexity :: O(1)
 ### Java Solution
 ```java
-
+class Solution {
+  public ListNode reverseList(ListNode head) {
+    ListNode newHead = new ListNode(0), ref = newHead;
+    while (head != null) {
+      ListNode next = head;
+      head = head.next;
+      next.next = ref;
+      ref = next;
+    }
+    return newHead.next;
+  }
+}
 ```
 ### JavaScript Solution
 ```javascript
