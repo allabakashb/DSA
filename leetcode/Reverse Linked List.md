@@ -20,14 +20,14 @@ Output: [6,5,4,3,2,1]
 ```java
 class Solution {
   public ListNode reverseList(ListNode head) {
-    ListNode newHead = new ListNode(0), ref = newHead;
+    ListNode ref = null;
     while (head != null) {
       ListNode next = head;
       head = head.next;
       next.next = ref;
       ref = next;
     }
-    return newHead.next;
+    return ref;
   }
 }
 ```
