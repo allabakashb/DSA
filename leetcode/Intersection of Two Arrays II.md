@@ -126,7 +126,7 @@ class Solution {
                 Integer count = map.get(nums2[j]);
                 if (count > 0) {
                     res.add(nums2[j]);
-                    map.put(nums2[j], count-1);
+                    map.put(nums2[j], count-1); //This can be avoided by using array as value. 
                 }
             }
         }
