@@ -5,3 +5,6 @@
 * [Slowest Key](leetcode/Slowest%20Key.md)
 * [Reverse Linked List](leetcode/Reverse%20Linked%20List.md)
 * [Intersection of Two Arrays II](leetcode/Intersection%20of%20Two%20Arrays%20II.md)
+* [Spiral Matrix](leetcode/Spiral%20Matrix.md)
+* [Expression Add Operators(In Progress)](leetcode/[In Progress]Expression Add Operators.md)
+* [Max Consecutive Ones](leetcode/Max Consecutive Ones.md)
